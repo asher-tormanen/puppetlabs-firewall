@@ -204,7 +204,7 @@ module Puppet::Util::Firewall
       os_key = 'Fedora'
     end
 
-    if os_key == 'RedHat' && Facter.value(:operatingsystem) == 'Amazon' && Facter.value(:operatingsystemrelease).to_i == 2022
+    if os_key == 'RedHat' && Facter.value(:operatingsystem) == 'Amazon' && Facter.value(:operatingsystemrelease).to_i >= 2
       os_key = 'Amazon'
     end
 
